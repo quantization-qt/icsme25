@@ -5,58 +5,85 @@ We evaluated quantized and full-precision LCMs using state-of-the-art static ana
 
 Repository Structure
 
-├── data/
-│   ├── multiple-java/
-│   ├── multiple-python/
-│   ├── mceval-java/
-│   ├── mceval-python/
-│   ├── manual-analysis/
-│   ├── conflicts-analysis/
-│   └── summary_statistics.csv
-│
-├── models/
-│   ├── codellama-7b-awq/
-│   ├── codellama-13b-awq/
-│   ├── codellama-34b-awq/
-│   ├── deepseekcoder-1.3b-awq/
-│   ├── deepseekcoder-6.7b-awq/
-│   ├── deepseekcoder-33b-awq/
-│   ├── codellama-7b-fp/
-│   ├── codellama-13b-fp/
-│   ├── codellama-34b-fp/
-│   ├── deepseekcoder-1.3b-fp/
-│   ├── deepseekcoder-6.7b-fp/
-│   ├── deepseekcoder-33b-fp/
-│   └── model_configs/
-│
-├── scripts/
-│   ├── run_static_analysis.py
-│   ├── process_sonarcloud.py
-│   ├── process_pylint_flake8.py
-│   ├── compute_conflicts.py
-│   ├── extract_quality_metrics.py
-│   ├── statistical_tests.py
-│   ├── manual_analysis_pipeline.py
-│   ├── generate_plots.py
-│   ├── utils/
-│   └── README.md
-│
-├── results/
-│   ├── summary_results.csv
-│   ├── conflicts_matrix.csv
-│   ├── quality_metrics_python.csv
-│   ├── quality_metrics_java.csv
-│   ├── statistical_tests_output.txt
-│   ├── plots/
-│   ├── raw_predictions/
-│   └── README.md
-│
-├── docs/
-│   ├── replication_instructions.pdf
-│   ├── methodology.md
-│   ├── experiment_setup.md
-│   ├── license.txt
-│   ├── acknowledgments.md
-│   ├── references.bib
-│   └── README.md
-│
+├── LICENSE
+├── README.md
+├── SonarCloud.pdf
+├── analysis-scripts
+│   ├── analysis_PMD_checkstyle.py
+│   ├── analysis_pylint_flake8.py
+│   ├── json-java.py
+│   └── json-python.py
+├── manual-analysis
+└── statistical-tests
+
+# Project Repository Overview
+
+This repository contains analysis scripts and resources for code generation tasks performed using the [MultipL-E](https://github.com/nuprl/MultiPL-E) repository. It also provides scripts for processing generated files, running code quality analyses with PMD, Checkstyle, Pylint, and Flake8, and instructions for integrating SonarCloud analysis.
+
+---
+
+## Installation
+
+To install all necessary Python dependencies, use:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Code Generation
+
+- Generate your code using the [MultipL-E](https://github.com/nuprl/MultiPL-E) repository.
+- After generation, you will receive `.gz` compressed files.
+- Extract these files using the following command:
+
+```bash
+gunzip <your-generated-file>.gz
+```
+
+---
+
+## JSON Extraction
+
+Move into the `analysis-scripts` directory to convert the extracted JSON files to a readable format. Edit the directory path in the scripts and then run:
+
+- For Python-generated code, run:
+
+```bash
+python json-python.py
+```
+
+- For Java-generated code, run:
+
+```bash
+python json-java.py
+```
+
+---
+
+## Code Analysis
+
+While in the `analysis-scripts` directory, perform analyses using:
+
+- **Java Code Analysis (PMD & Checkstyle)**:
+
+```bash
+python analysis_PMD_checkstyle.py
+```
+
+- **Python Code Analysis (Pylint & Flake8)**:
+
+```bash
+python analysis_pylint_flake8.py
+```
+
+Check analysis results from the generated JSON and CSV files.
+
+---
+
+## SonarCloud Analysis
+
+Follow the instructions detailed in [SonarCloud.pdf](SonarCloud.pdf) for integrating and conducting SonarCloud analyses.
+
+

@@ -4,17 +4,18 @@ This repository contains the replication package for our study on the impact of 
 We evaluated quantized and full-precision LCMs using state-of-the-art static analysis tools, including SonarCloud, PMD, Pylint, and Flake8, across two programming languages (Python and Java) and two benchmarks (MultipLE and McEval). The replication package includes all relevant scripts, datasets, and documentation necessary to reproduce our experiments and extend our analysis.
 
 Repository Structure
-
+```
+.
 ├── LICENSE
 ├── README.md
 ├── SonarCloud.pdf
-├── analysis-scripts
-│   ├── analysis_PMD_checkstyle.py
-│   ├── analysis_pylint_flake8.py
-│   ├── json-java.py
-│   └── json-python.py
-├── manual-analysis
-└── statistical-tests
+├── generated-code-analysis
+└── analysis-scripts
+    ├── analysis_PMD_checkstyle.py
+    ├── analysis_pylint_flake8.py
+    ├── json-java.py
+    └── json-python.py
+```
 
 # Project Repository Overview
 
@@ -85,5 +86,8 @@ Check analysis results from the generated JSON and CSV files.
 ## SonarCloud Analysis
 
 Follow the instructions detailed in [SonarCloud.pdf](SonarCloud.pdf) for integrating and conducting SonarCloud analyses.
+
+## Our Generated code and Analysis reports
+The `generated-code-analysis` directory contains the genarted code and the static tool's analysis reports. 
 
 

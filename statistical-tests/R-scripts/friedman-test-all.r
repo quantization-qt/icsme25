@@ -27,7 +27,7 @@ for (metric in metrics) {
   }
 }
 
-all_results$signif <- ifelse(!is.na(all_results$p.value) & all_results$p.value < 0.05, "Yes", "No")
+all_results$signif <- ifelse(!is.na(all_results$p.value) & all_results$p.value < 0.01, "Yes", "No")
 write.csv(all_results, output_file, row.names = FALSE)
 
 
@@ -60,7 +60,7 @@ for (metric in metrics) {
   }
 }
 
-all_results$signif <- ifelse(!is.na(all_results$p.value) & all_results$p.value < 0.05, "Yes", "No")
+all_results$signif <- ifelse(!is.na(all_results$p.value) & all_results$p.value < 0.01, "Yes", "No")
 write.csv(all_results, output_file, row.names = FALSE)
 
 
@@ -68,7 +68,7 @@ write.csv(all_results, output_file, row.names = FALSE)
 rm(list = ls())
 
 metrics <- c("Reliability", "Maintainability", "Security_Hotspots", "CyC", "CoC")
-input_dir <- "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube/prepared_friedman_sonarqube"
+input_dir <- "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube-mceval/prepared_friedman_sonarqube-python"
 output_file <- "friedman_sonarqube_results.csv"
 
 files <- list.files(input_dir, pattern = "*.csv", full.names = TRUE)

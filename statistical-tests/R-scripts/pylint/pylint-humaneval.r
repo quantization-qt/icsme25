@@ -6,21 +6,21 @@ library(effsize)
 
 # Manually specify file paths
 FP_paths <- list(
-  "CodeLlama-7B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_7b-fp.csv",
-  "CodeLlama-13B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_13b-fp.csv",
-  "CodeLlama-34B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_34b-fp.csv",
-  "DeepSeek-Coder-1.3B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_1.3b-fp.csv",
-  "DeepSeek-Coder-6.7B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_6.7b-fp.csv",
-  "DeepSeek-Coder-33B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_33b-fp.csv"
+  "CodeLlama-7B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_7b-fp.csv",
+  "CodeLlama-13B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_13b-fp.csv",
+  "CodeLlama-34B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_34b-fp.csv",
+  "DeepSeek-Coder-1.3B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_1.3b-fp.csv",
+  "DeepSeek-Coder-6.7B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_6.7b-fp.csv",
+  "DeepSeek-Coder-33B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_33b-fp.csv"
 )
 
 AWQ_paths <- list(
-  "CodeLlama-7B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_7b-awq.csv",
-  "CodeLlama-13B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_13b-awq.csv",
-  "CodeLlama-34B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_34b-awq.csv",
-  "DeepSeek-Coder-1.3B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_1.3b-awq.csv",
-  "DeepSeek-Coder-6.7B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_6.7b-awq.csv",
-  "DeepSeek-Coder-33B" = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_33b-awq.csv"
+  "CodeLlama-7B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_7b-awq.csv",
+  "CodeLlama-13B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_13b-awq.csv",
+  "CodeLlama-34B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_34b-awq.csv",
+  "DeepSeek-Coder-1.3B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_1.3b-awq.csv",
+  "DeepSeek-Coder-6.7B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_6.7b-awq.csv",
+  "DeepSeek-Coder-33B" = "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/humaneval-csv_pylint_pmd_flake8/r-pylint_33b-awq.csv"
 )
 
 

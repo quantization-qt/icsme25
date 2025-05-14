@@ -3,7 +3,7 @@ import random
 import pandas as pd
 
 # Define the directory path
-directory_path = "/home/saima/projects/NonFunc-AWQ/multipLE-java/deepseekcoder-33B-instruct-awq/completion"
+directory_path = "path/to/directory"  # Replace with the actual path to your directory
 
 # Output Excel file name
 output_xlsx = "java-deepseek-33B-instruct-awq.xlsx"

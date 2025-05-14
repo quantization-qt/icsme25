@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # Define the input Excel file path
-input_file = "/home/saima/projects/NonFunc-AWQ/mcEval-py/deepseekcoder-33B-instruct-hf/pylint/pylint_analysis.xlsx"
+input_file = "path/to/pylint_analysis.xlsx"
 
 # Define the output directory and CSV file path
-output_directory = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8"
+output_directory = "path/to/mceval-csv_pylint_pmd_flake8"
 output_csv_path = os.path.join(output_directory, "r-pylint_33b-fp.csv")
 
 # Ensure the output directory exists

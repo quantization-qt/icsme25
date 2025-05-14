@@ -1,6 +1,6 @@
 import pandas as pd
 # Define the new file path
-file_path = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/py-codellama13B-AWQ-all.csv"
+file_path = "path/to/csv_file.csv"
 
 # Load the CSV file
 df = pd.read_csv(file_path)

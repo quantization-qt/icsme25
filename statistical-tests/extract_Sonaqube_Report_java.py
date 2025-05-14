@@ -5,8 +5,8 @@ import os
 import re
 
 # SonarCloud API Configuration
-SONAR_TOKEN = 'ba0ba66d90376426f0eb47e18f645955770d8a51'  # Replace with your SonarCloud token
-PROJECT_KEY = 'saimaafrin_SonarQube-Analysis-java'       # Replace with your SonarCloud project key
+SONAR_TOKEN = '0000000000000000000000'  # Replace with your SonarCloud token
+PROJECT_KEY = 'username_SonarQube-Analysis-java'       # Replace with your SonarCloud project key
 SONAR_URL = 'https://sonarcloud.io'
 
 # Directory to filter (relative to project root)

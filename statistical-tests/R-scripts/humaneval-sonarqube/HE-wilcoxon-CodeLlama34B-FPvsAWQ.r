@@ -5,12 +5,12 @@ if (!require("effsize")) install.packages("effsize")
 library(effsize)
 
 # Load the Python datasets
-FP_data_py <- read.csv("/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/py-codellama34B-FP-all.csv", header=TRUE)
-AWQ_data_py <- read.csv("/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/py-codellama34B-AWQ-all.csv", header=TRUE)
+FP_data_py <- read.csv("/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/py-codellama34B-FP-all.csv", header=TRUE)
+AWQ_data_py <- read.csv("/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/py-codellama34B-AWQ-all.csv", header=TRUE)
 
 # Load the Java datasets
-FP_data_java <- read.csv("/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/java-codellama34B-FP-all.csv", header=TRUE)
-AWQ_data_java <- read.csv("/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/java-codellama34B-AWQ-all.csv", header=TRUE)
+FP_data_java <- read.csv("/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/java-codellama34B-FP-all.csv", header=TRUE)
+AWQ_data_java <- read.csv("/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/java-codellama34B-AWQ-all.csv", header=TRUE)
 
 # Ensure both datasets have the same length
 min_length_py <- min(nrow(FP_data_py), nrow(AWQ_data_py))

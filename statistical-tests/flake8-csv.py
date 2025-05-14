@@ -2,10 +2,10 @@ import os
 import pandas as pd
 
 # Define the input Excel file path
-input_file = "/home/saima/projects/NonFunc-AWQ/mcEval-py/deepseekcoder-33B-instruct-hf/flake8/flake8_analysis.xlsx"
+input_file = "path/to/.xlsx"
 
 # Define the output directory and CSV file path
-output_directory = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8"
+output_directory = "path/to/directory"  # Replace with the actual path to your directory
 output_csv_path = os.path.join(output_directory, "r-flake8_33b-fp.csv")
 
 # Ensure the output directory exists

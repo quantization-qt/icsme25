@@ -32,8 +32,8 @@ def calculate_weighted_kappa(file_path_e1, file_path_e2):
     return kappa_results
 
 # Example usage:
-file_path_e1 = "/home/saima/projects/NonFunc-AWQ/scripts/manual-analysis/non-func (Manual-analysis) - E1-py-codellama-34B-awq.csv"  
-file_path_e2 = "/home/saima/projects/NonFunc-AWQ/scripts/manual-analysis/non-func (Manual-analysis) - E2-py-codellama-34B-awq.csv"  # Replace with actual path
+file_path_e1 = "path/to/csv_file.csv"  
+file_path_e2 = "path/to/csv_file.csv" 
 
 results = calculate_weighted_kappa(file_path_e1, file_path_e2)
 

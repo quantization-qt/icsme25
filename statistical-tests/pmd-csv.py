@@ -3,10 +3,10 @@ import pandas as pd
 from collections import defaultdict
 
 # Define the input folder path
-input_folder = "/home/saima/projects/NonFunc-AWQ/mcEval-java/deepseekcoder-33B-instruct-hf/pmd"  # Replace with the actual folder path
+input_folder = "path/to/directory"  # Replace with the actual folder path
 
 # Define the output CSV file path
-output_directory = "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8"
+output_directory = "path/to/directory"  # Replace with the actual path to your directory
 output_csv_path = os.path.join(output_directory, "r-pmd_33b-fp.csv")
 
 # Categories to track (mapping file suffix to proper column name)

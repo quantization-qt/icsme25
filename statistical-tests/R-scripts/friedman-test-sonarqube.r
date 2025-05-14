@@ -2,7 +2,7 @@
 rm(list = ls())
 
 metrics <- c("Reliability", "Maintainability", "Security_Hotspots", "CyC", "CoC")
-input_dir <- "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube-mceval/prepared_friedman_sonarqube-java"
+input_dir <- "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube-mceval/prepared_friedman_sonarqube-java"
 output_file <- "friedman_sonarqube_results-java.csv"
 
 files <- list.files(input_dir, pattern = "*.csv", full.names = TRUE)

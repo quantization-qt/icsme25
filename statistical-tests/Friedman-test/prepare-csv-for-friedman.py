@@ -5,26 +5,31 @@ import pandas as pd
 '''tools = {
     "pylint": {
         "metrics": ["Error", "Warning", "Convention", "Refactor"],
-        "root": "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
+        "root": "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
         "prefix": "r-pylint"
     },
     "flake8": {
         "metrics": ["ERROR", "WARNING", "PyFlakes"],
-        "root": "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
+        "root": "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
         "prefix": "r-flake8"
     },
     "sonarqube": {
         "metrics": ["Reliability", "Maintainability", "Security_Hotspots", "CyC", "CoC"],
-        "root": "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube",
+        "root": "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube-mceval",
         "prefix": "mc-py"
     }
 }'''
 
 tools = {
-    "pylint": {
-        "metrics": ["Error", "Warning", "Convention", "Refactor"],
-        "root": "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
-        "prefix": "r-pylint"
+    "pmd": {
+        "metrics": ["Best_Practices", "Code_Style", "Design", "Error_Prone", "Multithreading", "Performance"],
+        "root": "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8",
+        "prefix": "r-pmd"
+    },
+    "sonarqube": {
+        "metrics": ["Reliability", "Maintainability", "Security_Hotspots", "CyC", "CoC"],
+        "root": "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/csv-sonarqube-mceval",
+        "prefix": "mc-java"
     }
 }
 
@@ -39,7 +44,8 @@ tools = {
 }'''
 
 models = {
-    "DeepSeek-Coder-1.3B": "dsc-1.3B-awq"
+    "DeepSeek-Coder-1.3B": "dsc-1.3B-awq",
+    "CodeLlama-7B": "cl-7B-awq"
     
 }
 
@@ -58,11 +64,12 @@ for tool_name, config in tools.items():
         generations = {}
 
         for i in range(1, 10):
-            if tool_name in ["pylint", "flake8"]:
+            if tool_name in ["pylint", "flake8", "pmd"]:
                 files = [f for f in os.listdir(model_path) if f.startswith(prefix) and f.endswith(f"awq-{i}.csv")]
             else:  # SonarQube
                 model_tag = subdir.replace("cl-", "codellama").replace("dsc-", "deepseek").replace("B-awq", "B")
-                pattern = f"mc-py-{model_tag}-AWQ-{i}.csv"
+                #pattern = f"mc-py-{model_tag}-AWQ-{i}.csv"
+                pattern = f"mc-java-{model_tag}-AWQ-{i}.csv"
                 files = [f for f in os.listdir(model_path) if f == pattern]
 
 

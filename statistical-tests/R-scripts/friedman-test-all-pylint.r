@@ -2,7 +2,7 @@
 rm(list = ls())
 
 metrics <- c("Error", "Warning", "Convention", "Refactor")
-input_dir <- "/home/saima/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8/prepared_friedman_pylint"
+input_dir <- "/home/user/projects/NonFunc-AWQ/scripts/statistical-tests/mceval-csv_pylint_pmd_flake8/prepared_friedman_pylint"
 output_file <- "friedman_pylint_results.csv"
 
 files <- list.files(input_dir, pattern = "*.csv", full.names = TRUE)
